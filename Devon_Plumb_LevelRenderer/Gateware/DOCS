@@ -1,0 +1,34 @@
+Gateware uses doxygen(www.doxygen.nl) to document the API interfaces for end users.
+
+We are slowly moving to a full CI/CD development pipeline.
+Eventually this file will be replaced with a hyperlink to autogenarated documentation.
+
+For the time being however you will need to follow these steps to build the docs:
+
+You cannot unfortuntely use Gateware.h directly for generation.(it would affect size/compile times)
+
+Instead, download the whole Gateware repo to your local machine and extract it somewhere.
+
+Download and install doxygen to your machine. (link above to installers)
+
+Run the "Doxywizard" GUI front end for Doxygen.
+
+Click File->Open and navigate to the "DevOps" folder inside the repo you extracted.
+
+Select the file "doxyfile" and press the [Open] button.
+
+Open the "Gateware.h" header file and note the current MAJOR/MINOR/PATCH versions near the top.
+
+In Doxywizard replace the "?" values with the above values respectively.
+
+Now select the "Run" tab and click [Run doxygen] to generate the HTML documentation.
+
+Once it completes just click [Show HTML output] to be taken to the docs.
+
+If you want to bundle it with the header just copy the newly generated "html" and "latex" folders.
+
+We realize this process is a bit annoying, so we hope to automate it soon.  
+
+
+
+ 
